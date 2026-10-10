@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HEHE</title>
+
+    <style> * { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(135deg, #e8f5e9, #c8e6c9, #f1f8e9); color: #1b4332; min-height: 100vh; padding: 30px 20px; } .container { max-width: 850px; margin: auto; } header { background: linear-gradient(135deg, #15803d, #4ade80); color: white; text-align: center; padding: 35px 20px; border-radius: 24px; margin-bottom: 30px; box-shadow: 0 10px 25px rgba(21, 128, 61, 0.2); } header h1 { font-size: 32px; margin-bottom: 10px; } header p { font-size: 16px; color: #f0fdf4; } .section { background: rgba(255, 255, 255, 0.9); padding: 25px; border-radius: 20px; margin-bottom: 25px; border: 1px solid #bbf7d0; box-shadow: 0 6px 18px rgba(22, 101, 52, 0.08); } .section h2 { color: #166534; font-size: 23px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #dcfce7; } .questions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; } .question { background: #f0fdf4; border: 1px solid #bbf7d0; padding: 17px; border-radius: 14px; font-size: 19px; font-weight: 600; text-align: center; transition: 0.25s ease; } .question:hover { background: #dcfce7; border-color: #22c55e; transform: translateY(-3px); box-shadow: 0 5px 12px rgba(22, 101, 52, 0.1); } .answer { width: 90px; padding: 8px; margin-left: 8px; border: 2px solid #86efac; border-radius: 8px; outline: none; font-size: 16px; text-align: center; color: #14532d; background: white; } .answer:focus { border-color: #16a34a; box-shadow: 0 0 0 3px #dcfce7; } .submit-btn { display: block; width: 100%; margin-top: 25px; padding: 15px; border: none; border-radius: 12px; background: linear-gradient(135deg, #15803d, #22c55e); color: white; font-size: 18px; font-weight: bold; cursor: pointer; transition: 0.3s; } .submit-btn:hover { background: linear-gradient(135deg, #166534, #16a34a); transform: translateY(-2px); box-shadow: 0 6px 15px rgba(21, 128, 61, 0.2); } footer { text-align: center; padding: 20px; color: #166534; font-size: 14px; } @media (max-width: 500px) { body { padding: 15px 10px; } header h1 { font-size: 25px; } .section { padding: 17px; } .questions { grid-template-columns: 1fr; } } </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Hi! Ela Unnav? Antha Manchena? </h1>
+        
+    </header>
+
+    <main class="container">
+
+        <section class="math-section">
+            <h2> Addition & Subtraction</h2>
+
+            <h3>Level 1 — Basic Practice</h3>
+            <div class="question-grid">
+                <div class="question">3 + 5</div>
+                <div class="question">7 + 2</div>
+                <div class="question">6 + 4</div>
+                <div class="question">9 + 8</div>
+                <div class="question">12 + 5</div>
+                <div class="question">14 + 3</div>
+                <div class="question">18 + 7</div>
+                <div class="question">25 + 6</div>
+                <div class="question">17 − 5</div>
+                <div class="question">9 − 4</div>
+                <div class="question">15 − 8</div>
+                <div class="question">20 − 7</div>
+                <div class="question">32 − 9</div>
+                <div class="question">45 − 12</div>
+                <div class="question">28 − 16</div>
+                <div class="question">8 + 7</div>
+                <div class="question">16 + 9</div>
+                <div class="question">27 + 18</div>
+                <div class="question">35 + 29</div>
+                <div class="question">48 + 37</div>
+                <div class="question">56 + 28</div>
+                <div class="question">67 + 49</div>
+                <div class="question">89 + 76</div>
+                <div class="question">42 − 18</div>
+                <div class="question">63 − 27</div>
+                <div class="question">80 − 46</div>
+                <div class="question">91 − 58</div>
+                <div class="question">105 − 67</div>
+                <div class="question">132 − 85</div>
+                <div class="question">200 − 126</div>
+            </div>
+
+            <h3>Level 2 — Bigger Numbers</h3>
+            <div class="question-grid">
+                <div class="question">347 + 286</div>
+                <div class="question">568 + 457</div>
+                <div class="question">729 + 684</div>
+                <div class="question">1,245 + 2,789</div>
+                <div class="question">3,678 + 4,856</div>
+                <div class="question">6,795 + 2,468</div>
+                <div class="question">804 − 367</div>
+                <div class="question">1,000 − 586</div>
+                <div class="question">1,425 − 768</div>
+                <div class="question">2,304 − 1,587</div>
+                <div class="question">5,000 − 2,786</div>
+                <div class="question">8,432 − 4,675</div>
+                <div class="question">9,876 + 7,895</div>
+                <div class="question">10,000 − 6,789</div>
+                <div class="question">12,456 − 7,898</div>
+            </div>
+
+            <h3>Level 3 — Mental Maths</h3>
+            <div class="question-grid">
+                <div class="question">25 + 75</div>
+                <div class="question">48 + 52</div>
+                <div class="question">125 + 75</div>
+                <div class="question">250 + 350</div>
+                <div class="question">475 + 25</div>
+                <div class="question">999 + 1</div>
+                <div class="question">698 + 302</div>
+                <div class="question">1,250 + 750</div>
+                <div class="question">2,450 + 550</div>
+                <div class="question">3,875 + 125</div>
+                <div class="question">4,999 + 2,001</div>
+                <div class="question">7,650 + 2,350</div>
+                <div class="question">8,750 + 1,250</div>
+                <div class="question">12,500 + 7,500</div>
+                <div class="question">19,875 + 125</div>
+                <div class="question">100 − 47</div>
+                <div class="question">200 − 85</div>
+                <div class="question">500 − 275</div>
+                <div class="question">1,000 − 450</div>
+                <div class="question">1,000 − 675</div>
+                <div class="question">2,000 − 999</div>
+                <div class="question">3,500 − 1,750</div>
+                <div class="question">5,000 − 2,450</div>
+                <div class="question">7,000 − 3,875</div>
+                <div class="question">10,000 − 4,999</div>
+                <div class="question">12,500 − 6,750</div>
+                <div class="question">15,000 − 8,650</div>
+                <div class="question">20,000 − 12,875</div>
+                <div class="question">25,000 − 17,500</div>
+                <div class="question">50,000 − 29,999</div>
+            </div>
+
+            <h3>Level 4 — Challenge</h3>
+            <div class="question-grid">
+                <div class="question">456 + 789 − 234</div>
+                <div class="question">1,250 − 475 + 386</div>
+                <div class="question">2,345 + 1,876 − 2,098</div>
+                <div class="question">5,000 − 1,999</div>
+                <div class="question">999 + 999 + 999</div>
+                <div class="question">7,654 − 3,876 + 1,245</div>
+                <div class="question">12,500 − 6,875</div>
+                <div class="question">3,456 + 2,789 + 1,678</div>
+                <div class="question">20,000 − 9,876</div>
+                <div class="question">15,678 + 8,945 − 7,896</div>
+                <div class="question">456 + 278</div>
+                <div class="question">925 − 468</div>
+                <div class="question">1,275 + 2,856</div>
+                <div class="question">3,405 − 1,768</div>
+                <div class="question">2,999 + 4,876</div>
+                <div class="question">6,000 − 2,987</div>
+                <div class="question">7,856 + 3,679</div>
+                <div class="question">9,432 − 5,876</div>
+                <div class="question">12,345 + 6,789</div>
+                <div class="question">20,000 − 12,678</div>
+                <div class="question">4,567 + 8,765 − 3,456</div>
+                <div class="question">15,000 − 7,895 + 2,468</div>
+                <div class="question">23,456 + 18,765</div>
+                <div class="question">40,000 − 27,895</div>
+                <div class="question">65,432 − 28,765</div>
+                <div class="question">47 + 68</div>
+                <div class="question">153 − 87</div>
+                <div class="question">286 + 497</div>
+                <div class="question">702 − 358</div>
+                <div class="question">1,245 + 987</div>
+                <div class="question">2,000 − 1,376</div>
+                <div class="question">3,678 + 2,945</div>
+                <div class="question">5,432 − 2,876</div>
+                <div class="question">8,765 + 6,789</div>
+                <div class="question">10,000 − 5,678</div>
+                <div class="question">12,345 + 7,856</div>
+                <div class="question">20,000 − 13,456</div>
+                <div class="question">34,567 + 28,765</div>
+                <div class="question">50,000 − 28,976</div>
+                <div class="question">76,543 − 39,876</div>
+            </div>
+        </section>
+
+        <section class="math-section">
+            <h2> Multiplication</h2>
+
+            <h3>Level 1 — Tables & Basics</h3>
+            <div class="question-grid">
+                <div class="question">2 × 7</div>
+                <div class="question">3 × 8</div>
+                <div class="question">4 × 9</div>
+                <div class="question">6 × 7</div>
+                <div class="question">8 × 8</div>
+                <div class="question">9 × 9</div>
+                <div class="question">12 × 6</div>
+                <div class="question">13 × 7</div>
+                <div class="question">14 × 8</div>
+                <div class="question">15 × 9</div>
+                <div class="question">16 × 7</div>
+                <div class="question">17 × 8</div>
+                <div class="question">18 × 6</div>
+                <div class="question">19 × 7</div>
+                <div class="question">20 × 12</div>
+                <div class="question">23 × 4</div>
+                <div class="question">36 × 7</div>
+                <div class="question">48 × 6</div>
+                <div class="question">57 × 8</div>
+                <div class="question">69 × 5</div>
+                <div class="question">84 × 7</div>
+                <div class="question">96 × 8</div>
+                <div class="question">125 × 6</div>
+                <div class="question">247 × 4</div>
+                <div class="question">368 × 7</div>
+                <div class="question">459 × 6</div>
+                <div class="question">578 × 8</div>
+                <div class="question">695 × 9</div>
+                <div class="question">786 × 7</div>
+                <div class="question">999 × 8</div>
+            </div>
+
+            <h3>Level 2 — Two-Digit Multiplication</h3>
+            <div class="question-grid">
+                <div class="question">12 × 14</div>
+                <div class="question">23 × 16</div>
+                <div class="question">27 × 35</div>
+                <div class="question">34 × 28</div>
+                <div class="question">46 × 37</div>
+                <div class="question">58 × 24</div>
+                <div class="question">67 × 49</div>
+                <div class="question">78 × 56</div>
+                <div class="question">89 × 67</div>
+                <div class="question">96 × 84</div>
+                <div class="question">125 × 24</div>
+                <div class="question">136 × 35</div>
+                <div class="question">248 × 46</div>
+                <div class="question">375 × 28</div>
+                <div class="question">486 × 57</div>
+            </div>
+
+            <h3>Level 3 — Shortcuts & Speed</h3>
+            <div class="question-grid">
+                <div class="question">48 × 5</div>
+                <div class="question">76 × 9</div>
+                <div class="question">43 × 11</div>
+                <div class="question">64 × 25</div>
+                <div class="question">38 × 50</div>
+                <div class="question">72 × 99</div>
+                <div class="question">125 × 16</div>
+                <div class="question">250 × 24</div>
+                <div class="question">999 × 37</div>
+                <div class="question">1,001 × 56</div>
+                <div class="question">84 × 125</div>
+                <div class="question">48 × 75</div>
+                <div class="question">256 × 25</div>
+                <div class="question">675 × 99</div>
+                <div class="question">1,250 × 48</div>
+            </div>
+
+            <h3>Level 4 — Advanced Multiplication</h3>
+            <div class="question-grid">
+                <div class="question">123 × 234</div>
+                <div class="question">246 × 135</div>
+                <div class="question">357 × 246</div>
+                <div class="question">468 × 357</div>
+                <div class="question">579 × 468</div>
+                <div class="question">624 × 315</div>
+                <div class="question">735 × 426</div>
+                <div class="question">846 × 537</div>
+                <div class="question">957 × 648</div>
+                <div class="question">1,234 × 56</div>
+                <div class="question">2,345 × 78</div>
+                <div class="question">3,456 × 123</div>
+                <div class="question">4,567 × 234</div>
+                <div class="question">5,678 × 345</div>
+                <div class="question">6,789 × 456</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <h2>Ipoyindhi le! Kangaru padaku </h2>
+        <p>practice cheyyi bro chatting manesi  </p>
+    </footer>
+
+</body>
+</html>
+
