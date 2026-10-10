@@ -9,6 +9,35 @@
     <style> * { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(135deg, #e8f5e9, #c8e6c9, #f1f8e9); color: #1b4332; min-height: 100vh; padding: 30px 20px; } .container { max-width: 850px; margin: auto; } header { background: linear-gradient(135deg, #15803d, #4ade80); color: white; text-align: center; padding: 35px 20px; border-radius: 24px; margin-bottom: 30px; box-shadow: 0 10px 25px rgba(21, 128, 61, 0.2); } header h1 { font-size: 32px; margin-bottom: 10px; } header p { font-size: 16px; color: #f0fdf4; } .section { background: rgba(255, 255, 255, 0.9); padding: 25px; border-radius: 20px; margin-bottom: 25px; border: 1px solid #bbf7d0; box-shadow: 0 6px 18px rgba(22, 101, 52, 0.08); } .section h2 { color: #166534; font-size: 23px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #dcfce7; } .questions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; } .question { background: #f0fdf4; border: 1px solid #bbf7d0; padding: 17px; border-radius: 14px; font-size: 19px; font-weight: 600; text-align: center; transition: 0.25s ease; } .question:hover { background: #dcfce7; border-color: #22c55e; transform: translateY(-3px); box-shadow: 0 5px 12px rgba(22, 101, 52, 0.1); } .answer { width: 90px; padding: 8px; margin-left: 8px; border: 2px solid #86efac; border-radius: 8px; outline: none; font-size: 16px; text-align: center; color: #14532d; background: white; } .answer:focus { border-color: #16a34a; box-shadow: 0 0 0 3px #dcfce7; } .submit-btn { display: block; width: 100%; margin-top: 25px; padding: 15px; border: none; border-radius: 12px; background: linear-gradient(135deg, #15803d, #22c55e); color: white; font-size: 18px; font-weight: bold; cursor: pointer; transition: 0.3s; } .submit-btn:hover { background: linear-gradient(135deg, #166534, #16a34a); transform: translateY(-2px); box-shadow: 0 6px 15px rgba(21, 128, 61, 0.2); } footer { text-align: center; padding: 20px; color: #166534; font-size: 14px; } @media (max-width: 500px) { body { padding: 15px 10px; } header h1 { font-size: 25px; } .section { padding: 17px; } .questions { grid-template-columns: 1fr; } } </style>
     <style>
         #mathPage { display: none; }
+        #welcomeScreen { display: none; }
+        #passwordScreen {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            text-align: center;
+        }
+        #passwordScreen h1 { color: #166534; }
+        #passwordInput {
+            width: min(320px, 90%);
+            padding: 14px;
+            border: 2px solid #86efac;
+            border-radius: 10px;
+            font-size: 17px;
+        }
+        #passwordSubmit {
+            padding: 13px 30px;
+            border: 0;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #15803d, #4ade80);
+            color: white;
+            font-size: 17px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        #passwordMessage { color: #b91c1c; min-height: 20px; }
         #welcomeScreen {
             min-height: 75vh;
             display: flex;
@@ -35,6 +64,13 @@
 </head>
 
 <body>
+    <main id="passwordScreen">
+        <h1>Enter Password</h1>
+        <input id="passwordInput" type="password" placeholder="ur mom's frnd name" autocomplete="current-password">
+        <button id="passwordSubmit" type="button" onclick="checkPassword()">Submit</button>
+        <p id="passwordMessage" role="alert"></p>
+    </main>
+
     <main id="welcomeScreen">
         <h1>pandhi gariki namaskaralu</h1>
         <button id="openMathButton" type="button" onclick="openMathFile()">Theda ithe open cheyyi ledhante velpo</button>
@@ -291,6 +327,29 @@
     </div>
 
     <script>
+        // Change this password to the one you want.
+        const PAGE_PASSWORD = "rocky";
+
+        function checkPassword() {
+            const enteredPassword = document.getElementById("passwordInput").value;
+            const message = document.getElementById("passwordMessage");
+
+            if (enteredPassword === PAGE_PASSWORD) {
+                document.getElementById("passwordScreen").style.display = "none";
+                document.getElementById("welcomeScreen").style.display = "flex";
+                message.textContent = "";
+                document.getElementById("passwordInput").value = "";
+            } else {
+                message.textContent = "Incorrect password. Try again.";
+                document.getElementById("passwordInput").value = "";
+                document.getElementById("passwordInput").focus();
+            }
+        }
+
+        document.getElementById("passwordInput").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") checkPassword();
+        });
+
         function openMathFile() {
             document.getElementById("welcomeScreen").style.display = "none";
             document.getElementById("mathPage").style.display = "block";
